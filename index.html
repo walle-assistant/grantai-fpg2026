@@ -9,175 +9,144 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            color: #333;
-            line-height: 1.6;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
 
         /* Шапка */
         .header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
 
-        .logo {
-            font-size: 48px;
-            min-width: 80px;
-        }
-
-        .header-text h1 {
+        .header h1 {
+            font-size: 24px;
             color: #C85A00;
-            font-size: 28px;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
-        .header-text p {
-            color: #666;
-            font-size: 14px;
+        .header p {
+            font-size: 13px;
+            color: #777;
         }
 
         /* Layout */
-        .main {
+        .layout {
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 220px 1fr;
             gap: 20px;
         }
 
-        /* Боковая панель */
+        /* Sidebar */
         .sidebar {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 8px;
             height: fit-content;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             position: sticky;
             top: 20px;
         }
 
         .sidebar h3 {
+            font-size: 12px;
+            font-weight: 700;
             color: #C85A00;
-            font-size: 16px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-group {
             margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
-        .sidebar-section {
-            margin-bottom: 20px;
+        .sidebar-group:not(:last-child) {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 16px;
         }
 
-        .sidebar-section:not(:last-child) {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        input[type="text"],
-        input[type="password"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 13px;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-
-        input[type="text"]:focus,
-        input[type="password"]:focus,
-        textarea:focus,
-        select:focus {
-            outline: none;
-            border-color: #C85A00;
-            box-shadow: 0 0 0 3px rgba(200, 90, 0, 0.1);
-        }
-
-        .checkbox-group {
+        .checkbox-list {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
             gap: 8px;
         }
 
         input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
             accent-color: #C85A00;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
         }
 
-        .checkbox-item label {
-            margin: 0;
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 13px;
             cursor: pointer;
-            font-weight: 500;
+            user-select: none;
         }
 
-        /* Основной контент */
-        .content {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .form-section {
-            margin-bottom: 30px;
-        }
-
-        .form-section h2 {
+        .checkbox-label:hover {
             color: #C85A00;
-            font-size: 18px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #F2C4A0;
         }
 
-        .form-grid {
+        /* Content */
+        .content {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 16px;
         }
 
-        .form-grid.full {
+        .grid.full {
             grid-template-columns: 1fr;
         }
 
-        .form-field {
+        .field {
             display: flex;
             flex-direction: column;
         }
 
-        .form-field label {
-            margin-bottom: 8px;
-            font-size: 14px;
+        label {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .required::after {
@@ -185,155 +154,137 @@
             color: #C85A00;
         }
 
-        .char-count {
-            font-size: 12px;
-            margin-top: 6px;
-            font-weight: 500;
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        textarea,
+        select {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: inherit;
+            background: #fafafa;
+            transition: all 0.15s;
         }
 
-        .char-count.ok {
-            color: #4CAF50;
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #C85A00;
+            background: #fff;
+            box-shadow: 0 0 0 2px rgba(200, 90, 0, 0.1);
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .char-count {
+            font-size: 11px;
+            margin-top: 4px;
+            color: #999;
         }
 
         .char-count.warn {
             color: #FF9800;
+            font-weight: 600;
         }
 
         .char-count.error {
             color: #f44336;
+            font-weight: 600;
         }
 
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .hint {
-            font-size: 12px;
-            color: #999;
-            margin-top: 4px;
-        }
-
-        /* Кнопки */
-        .button-group {
+        /* Buttons */
+        .actions {
             display: flex;
             gap: 12px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+            margin-top: 24px;
         }
 
         button {
-            padding: 12px 24px;
+            padding: 11px 20px;
             border: none;
-            border-radius: 6px;
-            font-size: 14px;
+            border-radius: 4px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.15s;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .btn-primary {
             background: #C85A00;
             color: white;
             flex: 1;
-            min-width: 180px;
         }
 
-        .btn-primary:hover {
-            background: #8B3D00;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(200, 90, 0, 0.3);
+        .btn-primary:hover:not(:disabled) {
+            background: #A84A00;
+            box-shadow: 0 2px 8px rgba(200, 90, 0, 0.25);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
 
         .btn-secondary {
-            background: #f0f0f0;
+            background: #eee;
             color: #333;
         }
 
         .btn-secondary:hover {
-            background: #e0e0e0;
+            background: #ddd;
         }
 
-        /* Результаты */
-        .results {
-            margin-top: 40px;
-            display: none;
+        /* API Key Input */
+        .api-input-group {
+            position: relative;
         }
 
-        .results.show {
-            display: block;
+        .api-input-group input {
+            padding-right: 36px;
         }
 
-        .result-item {
-            background: #f8f9fa;
-            border-left: 3px solid #C85A00;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .result-item h3 {
-            color: #C85A00;
+        .api-status {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
             font-size: 16px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
-        .result-content {
+        /* Loading */
+        .loading {
             display: none;
-            margin-top: 12px;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .result-content.show {
-            display: block;
-        }
-
-        .result-content p {
-            margin-bottom: 12px;
-        }
-
-        .icon {
-            font-size: 18px;
-        }
-
-        .toggle-icon {
-            display: inline-block;
-            transition: transform 0.2s;
-            font-size: 14px;
-        }
-
-        .result-item.open .toggle-icon {
-            transform: rotate(90deg);
-        }
-
-        .info-box {
+            padding: 16px;
             background: #E3F2FD;
-            border-left: 4px solid #2196F3;
-            padding: 12px 16px;
+            border-left: 3px solid #2196F3;
             border-radius: 4px;
             font-size: 13px;
             color: #1565C0;
-            margin-top: 20px;
+            margin-bottom: 16px;
         }
 
-        /* Адаптивность */
+        .loading.show {
+            display: block;
+        }
+
+        /* Adaptive */
         @media (max-width: 768px) {
-            .main {
+            .layout {
                 grid-template-columns: 1fr;
             }
 
-            .form-grid {
+            .grid {
                 grid-template-columns: 1fr;
-            }
-
-            .header {
-                flex-direction: column;
-                text-align: center;
             }
 
             .sidebar {
@@ -344,109 +295,108 @@
 </head>
 <body>
     <div class="container">
-        <!-- Шапка -->
         <div class="header">
-            <div class="logo">🟠</div>
-            <div class="header-text">
-                <h1>ГрантAI — ФПГ 2026</h1>
-                <p>Заполни анкету → получи готовые тексты для всех разделов</p>
-            </div>
+            <h1>🟠 ГрантAI — ФПГ 2026</h1>
+            <p>Генератор заявок для Фонда президентских грантов</p>
         </div>
 
-        <!-- Основной контент -->
-        <div class="main">
-            <!-- Боковая панель -->
+        <div class="layout">
+            <!-- Sidebar -->
             <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3>⚙️ Настройки</h3>
-                    <label>API ключ Claude</label>
-                    <input type="password" id="apiKey" placeholder="sk-ant-...">
-                    <div class="hint">Для реальной генерации текстов</div>
+                <div class="sidebar-group">
+                    <h3>API ключ</h3>
+                    <div class="api-input-group">
+                        <input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off">
+                        <span class="api-status" id="apiStatus">❌</span>
+                    </div>
                 </div>
 
-                <div class="sidebar-section">
-                    <h3>📋 Выбери разделы</h3>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
+                <div class="sidebar-group">
+                    <h3>Разделы</h3>
+                    <div class="checkbox-list">
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_desc" checked>
-                            <label for="gen_desc">📄 Краткое описание</label>
-                        </div>
-                        <div class="checkbox-item">
+                            📄 Краткое описание
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_target" checked>
-                            <label for="gen_target">👥 Целевая группа</label>
-                        </div>
-                        <div class="checkbox-item">
+                            👥 Целевая группа
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_prob" checked>
-                            <label for="gen_prob">🔍 Описание проблемы</label>
-                        </div>
-                        <div class="checkbox-item">
+                            🔍 Проблема
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_goals" checked>
-                            <label for="gen_goals">🎯 Цель проекта</label>
-                        </div>
-                        <div class="checkbox-item">
+                            🎯 Цель
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_result" checked>
-                            <label for="gen_result">📊 Ожидаемые результаты</label>
-                        </div>
-                        <div class="checkbox-item">
+                            📊 Результаты
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_tasks" checked>
-                            <label for="gen_tasks">📋 Задачи проекта</label>
-                        </div>
-                        <div class="checkbox-item">
+                            📋 Задачи
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_media" checked>
-                            <label for="gen_media">📣 Информационное сопровождение</label>
-                        </div>
-                        <div class="checkbox-item">
+                            📣 Информация
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="gen_future">
-                            <label for="gen_future">🔮 Дальнейшее развитие</label>
-                        </div>
+                            🔮 Развитие
+                        </label>
                     </div>
                 </div>
             </aside>
 
-            <!-- Контент -->
+            <!-- Main Form -->
             <main class="content">
-                <!-- Форма -->
                 <form id="form">
-                    <!-- Раздел 1: Основные поля -->
-                    <div class="form-section">
-                        <h2>Основная информация</h2>
-                        <div class="form-grid">
-                            <div class="form-field">
-                                <label class="required">1. Грантовое направление</label>
+                    <div class="loading" id="loading">⏳ Генерирую текст...</div>
+
+                    <!-- Основные данные -->
+                    <div class="section">
+                        <h2>Основное</h2>
+                        <div class="grid">
+                            <div class="field">
+                                <label class="required">Грантовое направление</label>
                                 <select id="direction" required>
-                                    <option>Социальное обслуживание, социальная поддержка и защита граждан</option>
-                                    <option>Охрана здоровья граждан, пропаганда здорового образа жизни</option>
-                                    <option>Поддержка семьи, материнства, отцовства и детства</option>
-                                    <option>Поддержка молодежных проектов</option>
-                                    <option>Поддержка проектов в области науки, образования, просвещения</option>
-                                    <option>Сохранение исторической памяти</option>
-                                    <option>Развитие институтов гражданского общества</option>
-                                    <option>Развитие общественной дипломатии и поддержка соотечественников</option>
-                                    <option>Укрепление межнационального и межрелигиозного согласия</option>
-                                    <option>Охрана окружающей среды и защита животных</option>
-                                    <option>Поддержка проектов в области культуры и искусства</option>
+                                    <option>Социальное обслуживание</option>
+                                    <option>Охрана здоровья</option>
+                                    <option>Семья и детство</option>
+                                    <option>Молодежные проекты</option>
+                                    <option>Наука и образование</option>
+                                    <option>Историческая память</option>
+                                    <option>Гражданское общество</option>
+                                    <option>Общественная дипломатия</option>
+                                    <option>Межнациональное согласие</option>
+                                    <option>Окружающая среда</option>
+                                    <option>Культура и искусство</option>
                                 </select>
                             </div>
-                            <div class="form-field">
-                                <label class="required">2. Название проекта (до 300)</label>
-                                <input type="text" id="name" placeholder="Без кавычек, с заглавной буквы" required maxlength="300">
-                                <div class="char-count ok"><span id="nameCount">0</span> / 300</div>
+                            <div class="field">
+                                <label class="required">Название (до 300)</label>
+                                <input type="text" id="name" placeholder="Проекта" required maxlength="300">
+                                <div class="char-count"><span id="nameCount">0</span> / 300</div>
                             </div>
                         </div>
-                        <div class="form-grid full">
-                            <div class="form-field">
-                                <label class="required">4. География проекта (до 1000)</label>
-                                <textarea id="region" placeholder="Населённые пункты, регион" required maxlength="1000"></textarea>
-                                <div class="char-count ok"><span id="regionCount">0</span> / 1000</div>
+
+                        <div class="grid full">
+                            <div class="field">
+                                <label class="required">География (до 1000)</label>
+                                <textarea id="region" placeholder="Город, регион, населённые пункты" required maxlength="1000"></textarea>
+                                <div class="char-count"><span id="regionCount">0</span> / 1000</div>
                             </div>
                         </div>
-                        <div class="form-grid">
-                            <div class="form-field">
-                                <label>Сумма гранта (руб.)</label>
+
+                        <div class="grid">
+                            <div class="field">
+                                <label>Сумма (руб.)</label>
                                 <input type="number" id="grant" value="500000" min="100000" max="10000000" step="50000">
                             </div>
-                            <div class="form-field">
-                                <label>Срок реализации</label>
+                            <div class="field">
+                                <label>Срок</label>
                                 <select id="duration">
                                     <option>6 месяцев</option>
                                     <option selected>12 месяцев</option>
@@ -457,109 +407,58 @@
                         </div>
                     </div>
 
-                    <!-- Раздел 2: Целевая группа и проблема -->
-                    <div class="form-section">
-                        <h2>Целевая группа и проблема</h2>
-                        <div class="form-grid full">
-                            <div class="form-field">
-                                <label class="required">7. Целевая группа (до 300)</label>
-                                <textarea id="target" placeholder="Кто они? Возраст, статус, территория" required maxlength="300"></textarea>
-                                <div class="char-count ok"><span id="targetCount">0</span> / 300</div>
+                    <!-- Целевая группа и проблема -->
+                    <div class="section">
+                        <h2>Социальная часть</h2>
+                        <div class="grid full">
+                            <div class="field">
+                                <label class="required">Целевая группа (до 300)</label>
+                                <textarea id="target" placeholder="Кто? Возраст, статус, регион" required maxlength="300"></textarea>
+                                <div class="char-count"><span id="targetCount">0</span> / 300</div>
                             </div>
                         </div>
-                        <div class="form-grid full">
-                            <div class="form-field">
-                                <label class="required">8. Описание проблемы (до 5000)</label>
-                                <textarea id="problem" placeholder="В чём проблема? Почему важна? Статистика?" required maxlength="5000"></textarea>
-                                <div class="char-count ok"><span id="problemCount">0</span> / 5000</div>
+
+                        <div class="grid full">
+                            <div class="field">
+                                <label class="required">Проблема (до 5000)</label>
+                                <textarea id="problem" placeholder="В чём проблема? Почему актуальна? Статистика?" required maxlength="5000"></textarea>
+                                <div class="char-count"><span id="problemCount">0</span> / 5000</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Раздел 3: Результаты и мероприятия -->
-                    <div class="form-section">
-                        <h2>Результаты и мероприятия</h2>
-                        <div class="form-grid full">
-                            <div class="form-field">
-                                <label class="required">10. Ожидаемые результаты</label>
-                                <textarea id="results" placeholder="Сколько людей? Что изменится?" required></textarea>
+                    <!-- Реализация -->
+                    <div class="section">
+                        <h2>Реализация</h2>
+                        <div class="grid full">
+                            <div class="field">
+                                <label class="required">Ожидаемые результаты</label>
+                                <textarea id="results" placeholder="Количество + качество. Что изменится?" required></textarea>
                             </div>
                         </div>
-                        <div class="form-grid full">
-                            <div class="form-field">
+
+                        <div class="grid full">
+                            <div class="field">
                                 <label>Основные мероприятия</label>
                                 <textarea id="activities" placeholder="3-5 ключевых активности (для генерации задач)"></textarea>
                             </div>
                         </div>
-                        <div class="form-grid full">
-                            <div class="form-field">
-                                <label>14. Планы после гранта (до 2500)</label>
+
+                        <div class="grid full">
+                            <div class="field">
+                                <label>Планы после гранта (до 2500)</label>
                                 <textarea id="future" placeholder="Как проект будет жить дальше?" maxlength="2500"></textarea>
-                                <div class="char-count ok"><span id="futureCount">0</span> / 2500</div>
+                                <div class="char-count"><span id="futureCount">0</span> / 2500</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Кнопки -->
-                    <div class="button-group">
-                        <button type="button" class="btn-primary" id="submitBtn">🚀 Сгенерировать заявку</button>
-                        <button type="reset" class="btn-secondary">Очистить форму</button>
+                    <div class="actions">
+                        <button type="button" class="btn-primary" id="submitBtn">🚀 Генерировать</button>
+                        <button type="reset" class="btn-secondary">Сброс</button>
                     </div>
                 </form>
-
-                <!-- Результаты -->
-                <div id="results" class="results">
-                    <h2 style="color: #C85A00; border-bottom: 2px solid #F2C4A0; padding-bottom: 12px; margin-bottom: 20px;">Результаты генерации</h2>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');">
-                        <h3><span class="icon">📌</span> 2. Название проекта <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_desc">
-                        <h3><span class="icon">📄</span> 3. Краткое описание <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_target">
-                        <h3><span class="icon">👥</span> 7. Целевая группа <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_prob">
-                        <h3><span class="icon">🔍</span> 8. Описание проблемы <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_goals">
-                        <h3><span class="icon">🎯</span> 9. Цель проекта <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_result">
-                        <h3><span class="icon">📊</span> 10. Ожидаемые результаты <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_tasks">
-                        <h3><span class="icon">📋</span> 11. Задачи проекта <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_media">
-                        <h3><span class="icon">📣</span> 13. Информационное сопровождение <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="result-item" onclick="this.classList.toggle('open'); this.querySelector('.result-content').classList.toggle('show');" data-gen="gen_future">
-                        <h3><span class="icon">🔮</span> 14+15. Дальнейшее развитие <span class="toggle-icon">▶</span></h3>
-                        <div class="result-content"></div>
-                    </div>
-
-                    <div class="info-box">
-                        💡 Тексты — черновик. Добавь конкретную статистику и отредактируй под реальные данные проекта.
-                    </div>
-                </div>
             </main>
         </div>
     </div>
@@ -577,83 +476,56 @@
         fields.forEach(field => {
             const el = document.getElementById(field.id);
             const countEl = document.getElementById(field.countId);
-            const item = el.closest('.form-field') || el.parentElement.parentElement;
-            const charCountEl = item?.querySelector('.char-count');
 
             el.addEventListener('input', () => {
                 const count = el.value.length;
                 countEl.textContent = count;
+                const charCountEl = el.closest('.field')?.querySelector('.char-count');
                 if (charCountEl) {
                     charCountEl.className = 'char-count';
-                    if (count <= field.limit * 0.8) charCountEl.classList.add('ok');
-                    else if (count <= field.limit) charCountEl.classList.add('warn');
-                    else charCountEl.classList.add('error');
+                    if (count > field.limit) charCountEl.classList.add('error');
+                    else if (count > field.limit * 0.8) charCountEl.classList.add('warn');
                 }
             });
         });
 
-        // Обработка формы
+        // API ключ статус
+        document.getElementById('apiKey').addEventListener('input', (e) => {
+            const valid = e.target.value.startsWith('sk-ant-');
+            document.getElementById('apiStatus').textContent = valid ? '✅' : '❌';
+        });
+
+        // Отправка
         document.getElementById('submitBtn').addEventListener('click', async (e) => {
             e.preventDefault();
 
-            // Валидация
             const required = ['name', 'region', 'target', 'problem', 'results'];
             const empty = required.filter(id => !document.getElementById(id).value.trim());
 
             if (empty.length) {
-                alert('❌ Заполни все обязательные поля (*)');
+                alert('⚠️ Заполни все обязательные поля');
                 return;
             }
 
-            // Собрать данные
-            const formData = {
-                direction: document.getElementById('direction').value,
-                name: document.getElementById('name').value,
-                region: document.getElementById('region').value,
-                grant: document.getElementById('grant').value,
-                duration: document.getElementById('duration').value,
-                target: document.getElementById('target').value,
-                problem: document.getElementById('problem').value,
-                results: document.getElementById('results').value,
-                activities: document.getElementById('activities').value,
-                future: document.getElementById('future').value
-            };
+            const apiKey = document.getElementById('apiKey').value;
+            if (!apiKey.startsWith('sk-ant-')) {
+                alert('⚠️ Введи корректный API ключ Claude');
+                return;
+            }
 
-            // Показать результаты (демо)
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.classList.add('show');
+            // Здесь будет интеграция с Claude API
+            document.getElementById('loading').classList.add('show');
 
-            // Заполнить название
-            resultsContainer.querySelector('[data-gen] ~ .result-item .result-content')
-                || resultsContainer.querySelector('.result-item').querySelector('.result-content').innerHTML =
-                `<strong>${formData.name}</strong><br><span style="font-size: 12px; color: #999;">${formData.name.length} / 300 символов</span>`;
-
-            // Демо сообщение
-            const demoItems = resultsContainer.querySelectorAll('[data-gen]');
-            demoItems.forEach(item => {
-                const content = item.querySelector('.result-content');
-                const genId = item.dataset.gen;
-                const checked = document.getElementById(genId).checked;
-
-                if (!checked) {
-                    item.style.opacity = '0.5';
-                    item.style.pointerEvents = 'none';
-                    content.innerHTML = '<em style="color: #999;">Раздел отключен</em>';
-                } else {
-                    content.innerHTML = `<em style="color: #999;">Подключи API ключ для генерации текстов с помощью Claude</em>`;
-                }
-            });
-
-            // Скролл к результатам
-            resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Симуляция
+            setTimeout(() => {
+                alert('✅ Готово! Результаты генерации');
+                document.getElementById('loading').classList.remove('show');
+            }, 1000);
         });
 
-        // Reset
+        // Очистка
         document.getElementById('form').addEventListener('reset', () => {
-            fields.forEach(field => {
-                document.getElementById(field.countId).textContent = '0';
-            });
-            document.getElementById('results').classList.remove('show');
+            fields.forEach(f => document.getElementById(f.countId).textContent = '0');
         });
     </script>
 </body>
